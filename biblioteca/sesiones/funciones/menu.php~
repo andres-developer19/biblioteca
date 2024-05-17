@@ -1,0 +1,21 @@
+<link rel="stylesheet" type="text/css" href="css/menu.css" />
+<ul id="navmenu-h">
+  <li><a href="./inicio-escuela.php">inicio</a></li>
+  <li><a href="#">Registro</a>
+      <ul>
+      <li><a href="./registro-inicial.php">Educaci&oacute;n Inicial</a></li>
+      <li><a href="./registro-primaria.php">Educaci&oacute;n primaria</a></li>
+      </ul>
+   </li>
+  <li><a href="#">Consultas</a>
+      <ul>
+      <li><a href="./consulta.php">Bolet&iacute;n</a></li>
+      <li><a href="./consulta.php">consulta 3</a></li>
+      <li><a href="./consulta.php">consulta 4</a></li>
+      </ul>
+   </li>
+  <li><a href="./certificado.php">Certificados</a></li>
+  <li><a href="./probando.php">Cerrar Sesi&oacute;n</a></li>
+</ul>
+</body>
+</html>

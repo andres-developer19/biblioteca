@@ -1,0 +1,6 @@
+<?php
+	include("conexion.php");
+	$sql="insert into alumno (cie, nac, sexo, nombre1, nombre2, apellido1, apellido2, fechanac, edad, lugarnac, municipio, entidad)
+	values ('$cie','$nac','$sexo','$nombre1','$nombre2','$apellido1','$apellido2','$fechanac','$edad','$lugarnac','$municipio','$entidad')";
+	$result=mysql_db_query($sql,$bd);
+?>

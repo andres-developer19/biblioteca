@@ -1,0 +1,22 @@
+<html>
+<head><link rel="stylesheet" type="text/css" href="css/menu2.css">
+</head>
+<body>
+<div class="contenedor">
+	<div class="menu">
+		<ul><a href="#">Inicio</a></ul>
+		<ul><a href="#">Ficha</a>
+			<li><a href="#">Educaci&oacute;n Inicial</a></li>
+			<li><a href="#">Educaci&oacute;n Primaria</a></li>
+		</ul>
+		<ul><a href="#">Consultas</a>
+			<li><a href="#">consulta1</a></li>
+			<li><a href="#">consulta2</a></li>
+		</ul>
+		<ul><a href="#">Certificados</a></ul>
+		</div>
+			
+</body>
+</html>
+</body>
+</html>

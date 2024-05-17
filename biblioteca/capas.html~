@@ -1,0 +1,4 @@
+<div id="comercial-centro" style="position:relative; width:50%; height:200px; background: #ccc; margin-bottom:5px;">
+ <div style=""><img src="imagenes/imagen1.jpg" border="0" alt="" width:50%; height:200px;></div>
+ <div style="position:absolute; top:10px; left:150px; z-index:2;" width:50%; height:200px;>lalalalalalalala</div>
+</div>

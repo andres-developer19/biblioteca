@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Registro - Vencedor</title>
+<link href="css/estilo.css" rel="stylesheet" type="text/css">
+<script src="jsp/archivo.js" type="text/javascript"></script>
+
+</head>
+<body>
+<form action="registro-vencedor.php" method="post">
+<div class="membrete"></div>
+<div class="espacio"><table align="center"><th><?php include("funciones/menu-mision.php");?></th></table></div>
+<div class="contenido">
+<table class="tablacontenido"><!-- TABLA CONTENIDO -->
+<tr><td align="center" valign="top">
+
+<a href="#" onclick="mostrar('paso1')">*****Registro Descriptivo*****</a>
+<br><br>
+<p><center><i>El registro Descriptivo tiene como prop&oacute;sito que los facilitadores y las facilitadoras<br> 
+realicen el seguimiento de los avances, debilidades y fortalezas de cada uno(a) de los(las) vencedores(as).<br>
+Permite elaborar el perfil de entrada de las dimensiones del ser, conocer, hacer y convivir, hacer <br>
+seguimiento en su desarrollo y el registro del perfil de salida que definen<br> la concepci&oacute;n integral del hecho educativo.</i></center></p>
+<!-- DIV PASO 1 -->
+<div class="recuadro" id="paso1" style="visibility:hidden"><p class="decorado">'</p><p class="letra">PASO 1
+
+</p>
+<p><center><i>Vencedor (a)</i></center></p>
+<table class="tabla">
+<tr>
+<td>
+<table class="registro">
+<tr>
+<td>CI: </td><td><input type="text" size="10"></td>
+<td>1&ordm;Apellido: </td><td><input type="text" size="10"></td>
+<td>2&ordm;Apellido: </td><td><input type="text" size="10"></td>
+</tr>
+<tr>
+<td>1&ordm; Nombre: </td><td><input type="text" size="10"></td>
+<td>2&ordm; Nombre: </td><td><input type="text" size="10"></td>
+<td>Sexo: </td><td><select><option>Femenino</option><option>Masculino</option></select></td>
+</tr>
+<tr>
+<td>Edad: </td><td><input type="text" size="10"></td>
+<td>Nacionalidad: </td><td><select><option>Venezolano</option><option>Extranjero</option></select></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Nivel: </td><td><input type="text" size="10"></td>
+<td>Semestre: </td><td><input type="text" size="10"></td>
+<td>Fecha Registro: </td><td><input type="text" size="10"></td>
+</tr>
+</table>
+<br>
+<hr>
+<table class="registro">
+<tr>
+<td>Municipio:</td><td><input type="text" size="10"></td>
+<td>Espacio/Plantel</td><td><input type="text" size="10"></td>
+<td>Facilitador</td><td><input type="text" size="10"></td></tr>
+</table>
+</td>
+</tr></table>
+
+
+<br><input type="button" name="boton" value="Siguiente ->" onclick="mostrar('paso2');ocultar('paso1');">
+
+
+</div> <!-- FIN DIV PASO 1 -->
+
+<!-- DIV PASO 2 -->
+<div class="recuadro" id="paso2" style="visibility:hidden"><p class="decorado">''</p><p class="letra">PASO 2</p>
+<table class="tabla">
+<tr>
+<td valign="top">
+<table class="registro">
+<tr><td>Conocer:</td><td><textarea cols="90" rows="3"></textarea></td></tr>
+<tr><td>Hacer</td><td><textarea cols="90" rows="3"></textarea></td></tr>
+<tr><td>Convivir</td><td><textarea cols="90" rows="3"></textarea></td></tr>
+<tr><td>Ser</td><td><textarea cols="90" rows="3"></textarea></td></tr>
+</table>
+</td>
+</tr></table>
+
+
+<br><input type="button" name="boton" value="Cerrar" onclick="ocultar('paso2')">
+
+</div> <!-- FIN DIV PASO 2-->
+
+</td></tr>
+</table> <!-- FIN TABLA CONTENIDO -->
+</div>
+<div class="pie"><?php include('pie.html');?></div>
+</form>
+</body>
+</html>

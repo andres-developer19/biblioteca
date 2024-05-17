@@ -1,0 +1,72 @@
+<html>
+<head>
+<script type="text/javascript">
+hoy=new Date();
+//hoy.setDate(28);
+
+manyana = new Date();
+manyana.setDate(hoy.getDate()+1);
+
+num=((hoy.getDate()<10) ? "0" : "")+hoy.getDate();
+meses=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+diasxMes=[31,28,31,30,31,30,31,31,30,31,30,31];
+
+function setMes(hoyOManyana, id){
+var sel = this.document.getElementById(id);
+while(sel.hasChildNodes())
+sel.removeChild(sel.lastChild);
+for (var i=0;i<12;i++){
+opt = new Option();
+opt.value = i ;
+opt.text = meses;
+if(hoyOManyana==0){
+if (hoy.getMonth()==i) {opt.selected=true;}
+}else if(hoyOManyana==1){
+if (manyana.getMonth()==i) {opt.selected=true;}
+}
+sel.options = opt;
+}
+}
+
+function setDias(hoyOManyana, dias, id){
+var sel = this.document.getElementById(id);
+while(sel.hasChildNodes())
+sel.removeChild(sel.lastChild);
+for (var i=1;i<=dias;i++){
+opt = new Option();
+opt.value = i;
+opt.text = i;
+if(hoyOManyana == 0){
+if (hoy.getDate()==i) {opt.selected=true;}
+}else if(hoyOManyana == 1){
+if (manyana.getDate()==i) {opt.selected=true;}
+}
+sel.options[i-1] = opt;
+}
+}
+
+function setSelects(){
+setMes(0, "elmes");
+setDias(0, diasxMes[hoy.getMonth()],"dias");
+setMes(1, "elmes2");
+setDias(1, diasxMes[manyana.getMonth()],"dias2");
+}
+</script>
+</head>
+<body onload="setSelects();">
+<form name="frm">
+dia ida:<select name="dias" id="dias">
+</select>
+<br><br>
+mes ida:
+<select name="elmes" id="elmes" onChange=setDias(0,diasxMes[this.options[this.selectedIndex].value],"dias");>
+</select>
+<br><br>
+dia regreso:<select name="dias2" id="dias2">
+</select>
+<br><br>
+mes regreso:<select name="elmes2" id="elmes2" onChange=setDias(1,diasxMes[this.options[this.selectedIndex].value],"dias2");>
+</select>
+</form>
+</body>
+</html> 

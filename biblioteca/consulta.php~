@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Consulta</title>
+<link href="css/estilo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="membrete"></div>
+<div class="espacio"><table align="center"><th><?php include("funciones/menu.php");?></th></table></div>
+<div class="contenido">
+
+<table class="tablacontenido">
+<tr><td>AQUI VA EL CONTENIDO ^^</td></tr>
+</table>
+</div>
+
+<div class="pie"><?php include('pie.html');?></div>
+</body>
+</html>

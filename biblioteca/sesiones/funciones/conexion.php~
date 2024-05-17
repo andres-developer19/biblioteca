@@ -1,0 +1,4 @@
+<?php
+$conexion=mysql_connect("localhost","root","mani2802");
+$bd="danny";
+?>

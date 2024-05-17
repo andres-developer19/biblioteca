@@ -1,0 +1,185 @@
+<?php
+$a=date("Y");
+$x=$a+1;
+
+$boton=$_Request["boton1"];
+$fechaing=$_Request["fechaing"];
+$motivo=$_Request["motivo"];
+$cie=$_Request["cie"];
+$nac=$_Request["nac"];
+$sexo=$_Request["sexo"];
+$nombre1=$_Request["nombre1"];
+$nombre2=$_Request["nombre2"];
+$apellido1=$_Request["apellido1"];
+$apellido2=$_Request["apellido2"];
+$fechanac=$_Request["fechanac"];
+$edad=$_Request["edad"];
+$lugarnac=$_Request["lugarnac"];
+$municipio=$_Request["municipio"];
+$entidad=$_Request["entidad"];
+
+if($boton=="Siguiente");
+{
+	include("conexion.php");
+	$sql="insert into alumno (cie, nac, sexo, nombre1, nombre2, apellido1, apellido2, fechanac, edad, lugarnac, municipio, entidad)
+	values ('$cie','$nac','$sexo','$nombre1','$nombre2','$apellido1','$apellido2','$fechanac','$edad','$lugarnac','$municipio','$entidad')";
+	$result=mysql_db_query($sql,$bd);
+}
+?>
+<html>
+<head>
+<title>Registro - Inicial</title>
+<link href="css/estilo.css" rel="stylesheet" type="text/css">
+<script src="jsp/archivo.js" type="text/javascript"></script>
+
+</head>
+<body>
+<form action="registro-inicial.php" method="post">
+<div class="membrete"></div>
+<div class="espacio"><table align="center"><th><?php include("funciones/menu.php");?></th></table></div>
+<div class="contenido">
+<table class="tablacontenido"><!-- TABLA CONTENIDO -->
+<tr><td align="center" valign="top">
+
+<a href="#" onclick="mostrar('paso1')">*****Inscribir Alumno*****</a>
+
+<!-- DIV PASO 1 -->
+<div class="recuadro" id="paso1" style="visibility:hidden"><p class="decorado">'</p><p class="letra">PASO 1
+
+</p>
+<p>A&ntilde;o Escolar: <?php print date("Y")." - ".$x; ?><br>
+Fecha Ingreso: <?php echo date("d/m/Y");?> <br>
+Motivo:<select name="motivo"><option selected value="nuevo">Nuevo Ingreso</option><option value="regular">Regular</option><option value="repeticion">Repetici&oacute;n de curso</option></select>
+</p>
+<p><center><i>Datos del Alumno (a)</i></center></p>
+<table class="tabla">
+
+<tr>
+<td>
+<table class="registro">
+<tr>
+<td>Cedula Escolar: </td><td><input type="text" name="cie" size="10"></td>
+<td>Nacionalidad: </td><td><select name="nac"><option value="ven">Venezolano(a)</option><option value="ext">Extranjero(a)</option></select></td>
+<td>Sexo: </td><td><select name="sexo"><option value="fem">Femenino</option><option value="masc">Masculino</option></select></td>
+</tr>
+<tr>
+<td>1&ordm; Nombre: </td><td><input type="text" name="nombre1" size="10"></td>
+<td>2&ordm; Nombre: </td><td><input type="text" name="nombre2" size="10"></td>
+<td>1&ordm; Apellido: </td><td><input type="text" name="apellido1" size="10"></td>
+</tr>
+<tr>
+<td>2&ordm; Apellido: </td><td><input type="text" name="apellido2" size="10"></td>
+<td>Fecha de Nac.: </td><td><select name="fechanac"><option>10</option></select> <select><option>Septiembre</option></select> <select><option>2011</option></select> </td>
+<td>Edad: </td><td><input type="text" name="edad" size="10" value="calculado automaticamente"></td>
+</tr>
+<tr>
+<td>Lugar de Nac.: </td><td><input type="text" name="lugarnac" size="10"></td>
+<td>Municipio: </td><td><input type="text" name="municipio" size="10"></td>
+<td>Entidad Federal: </td><td><input type="text" name="entidad" size="10"></td>
+</tr>
+</table>
+</td>
+</tr></table>
+
+
+<br><input type="button" name="boton" value="Siguiente ->" onclick="mostrar('paso2');ocultar('paso1');">
+
+
+</div> <!-- FIN DIV PASO 1 -->
+
+<!-- DIV PASO 2 -->
+<div class="recuadro" id="paso2" style="visibility:hidden"><p class="decorado">''</p><p class="letra">PASO 2</p>
+<br><p><center><i>Procedencia</i></center></p>
+<br>
+<table class="tabla">
+<tr>
+<td valign="top">
+<table class="registro">
+<tr><td>Documentos:</td><td><input type="checkbox" value="cedula" name="documento">Cedula<br><input type="checkbox" value="otro" name="documento">Otros</td>
+<td>Direcci&oacute;n: </td><td><textarea name="direccion" rows="3" cols="20"></textarea></td>
+<td>Vivienda: </td><td><select name="vivienda"><option value="rural">Zona Rural</option><option value="urbana">Zona Urbana</option><option value="casa">Casa</option><option value="quinta">Quinta</option><option value="apartamento">Apartamento</option><option value="rancho">Rancho</option><option value="otro">Otro</option></select></td></tr>
+<tr><td>Vive con:</td><td><input type="checkbox" value="Padre" name="vivecon">Padre<br><input type="checkbox" value="madre" name="vivecon">Madre<br><input type="checkbox" value="otro" name="vivecon">Otros</td>
+<td>Hermanos: </td><td><select name="hermanos"><option value="0-3">0-3</option><option value="4-7">4-7</option><option value="8-10">8-10</option><option value="11-">m&aacute;s</option></select></td>
+<td>Precedencia: </td><td><select name="precedencia"><option value="hogar">Hogar</option><option value="institucion">Otra Instituci&oacute;n</option></select></td></tr>
+<tr><td>Religi&oacute;n:</td><td><input type="text" name="religion" size="10"></td>
+<td>Transporte: </td><td><select name="transporte"><option value="particular">Particular</option><option value="urbano">urbano</option><option value="escolar">Escolar</option><option value="otro">Otro</option></select></td></tr>
+</table>
+
+</td>
+</tr></table>
+
+
+<br><input type="button" name="boton" value="Siguiente ->" onclick="mostrar('paso3');ocultar('paso2')">
+
+</div> <!-- FIN DIV PASO 2-->
+
+<!-- DIV PASO 3 -->
+<div class="recuadro" id="paso3" style="visibility:hidden"><p class="decorado">'''</p><p class="letra">PASO 3</p>
+<p><center><i>Antecedentes de Salud</i></center></p>
+<table class="tabla">
+<tr>
+<td valign="top">
+
+<table class="registro">
+<tr><td>Prenatal (embarazo): </td><td><textarea rows="1"></textarea></td><td>Prenatal (embarazo): </td><td><textarea rows="1"></textarea></td></tr>
+<tr><td>&iquest;C&oacute;mo se desarroll&oacute; <br>luego del nacimiento?:</td><td><textarea rows="1"></textarea></td>
+<td>&iquest;Tuvo algunos problemas?:</td><td><input type="radio" name="problemas"> SI <input type="text" size="12"><br><input type="radio" name="problemas"> NO </td></tr>
+<tr><td>Vacunas:</td>
+
+<td>
+<table class="registro" cellspacing="0">
+<tr><td><input type="checkbox" name="vacuna">Triple</td><td><input type="checkbox" name="vacuna">Polio</td></tr>
+<tr><td><input type="checkbox" name="vacuna">Antivari&oacute;lica</td><td><input type="checkbox" name="vacuna">Sarampi&oacute;n</td></tr>
+<tr><td><input type="checkbox" name="vacuna">Rubeola</td><td><input type="checkbox" name="vacuna">Antit&iacute;fica</td></tr>
+<tr><td><input type="checkbox" name="vacuna">Antiamarilica</td><td><input type="checkbox" name="vacuna">B.C.G</td></tr>
+<tr><td><input type="checkbox" name="vacuna">Alerg&iacute;as</td><td><input type="checkbox" name="vacuna">Otras:</td></tr>
+<tr><td><input type="checkbox" name="vacuna">Intervenciones<br> Quir&uacute;rgicas</td></tr>
+</table>
+
+</td>
+<td>Condiciones de salud:</td>
+<td>
+<table class="registro">
+<tr><td>Talla: </td><td><input type="text" size="4"></td></tr>
+<tr><td>Peso: </td><td><input type="text" size="4"></td></tr>
+<tr><td>Estatura: </td><td><input type="text" size="4"></td></tr>
+</table>
+</td></tr>
+</table>
+
+</td>
+</tr></table>
+
+
+<br><input type="button" name="boton" value="Siguiente ->" onclick="mostrar('paso4');ocultar('paso3')">
+
+</div><!-- FIN DIV PASO 3 -->
+
+<!-- DIV PASO 4 -->
+<div class="recuadro" id="paso4" style="visibility:hidden"><p class="decorado">''''</p><p class="letra">PASO 4</p>
+<p><center><i>Otros Datos</i></center></p>
+<table class="tabla">
+<tr>
+<td valign="top">
+<table class="otrodatos" border="1">
+<tr><th></th><th>Apellido</th><th>Nombre</th><th>C&eacute;dula</th><th>Grado de Instrucci&oacute;n</th><th>&iquest;Vivo?</th><th>Direcci&oacute;n</th><th>Tel&eacute;fono</th><th></th></tr>
+<tr><td>Padre: </td><td><input type="text" size="7"></td><td><input type="text" size="7"></td><td><input type="text" size="5"></td><td><select><option>No tiene</option><option>Primaria</option><option>Secundaria</option><option>Diversificada</option><option>Universitaria</option></select> </td><td><input type="radio">Si<br><input type="radio">No</td><td><textarea rows="1" cols="10"></textarea></td><td><input type="text" size="8"></td><td></td></tr>
+<tr><td>Madre: </td><td><input type="text" size="7"></td><td><input type="text" size="7"></td><td><input type="text" size="5"></td><td><select><option>No tiene</option><option>Primaria</option><option>Secundaria</option><option>Diversificada</option><option>Universitaria</option></select> </td><td><input type="radio">Si<br><input type="radio">No</td><td><textarea rows="1" cols="10"></textarea></td><td><input type="text" size="8"></td><td></td></tr>
+<tr><td>Representante: </td><td><input type="text" size="7"></td><td><input type="text" size="7"></td><td><input type="text" size="5"></td><td><select><option>No tiene</option><option>Primaria</option><option>Secundaria</option><option>Diversificada</option><option>Universitaria</option></select> </td><td><input type="radio">Si<br><input type="radio">No</td><td><textarea rows="1" cols="10"></textarea></td><td><input type="text" size="8"></td><td><input type="text" size="8" placeholder="Parentesco"></td></tr>
+</table>
+
+</td>
+</tr></table>
+
+
+<br><input type="button" name="boton" value="Cerrar" onclick="ocultar('paso4')">
+
+</div><!-- FIN DIV PASO 4 -->
+
+</td></tr>
+</table> <!-- FIN TABLA CONTENIDO -->
+</div>
+<div class="pie"><?php include('pie.html');?></div>
+</form>
+</body>
+</html>

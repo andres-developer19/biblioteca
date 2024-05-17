@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Index</title>
+<link href="css/estilo.css" rel="stylesheet" type="text/css">
+<script language ="JavaScript">
+</SCRIPT>
+</head>
+<body>
+<div class="membrete"></div>
+<div class="contenido">
+
+<table class="tablacontenido">
+<tr><td>
+<table align="center" border="5" bordercolor="CCC">
+<tr><td colspan="2" align="center">
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" 
+width="300" height="200">
+  <param name="play" value="animacion.swf" />
+  <param name="quality" value="high" />
+  <embed src="http://flash.astalaweb.net/Banners%202/Banner%20058.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="610" height="200"></embed>
+</object>
+
+</td></td></tr>
+<tr><td>
+<a href="sesion-escuela.php" title="P&aacute;gina de la Escuela"><img src="imagenes/escuela.jpg" alt="Escuela" border="0" height="200px" width="300px">
+</td>
+<td>
+<a href="sesion-mision.php" title="P&aacute;gina de la Misi&oacute;n"><img src="imagenes/mision.jpg" alt="Mision" border="0" height="200px" width="300px">
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+</div>
+<div class="pie"><?php include('pie.html');?>
+</div>
+</body>
+</html>

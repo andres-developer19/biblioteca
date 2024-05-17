@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>Inicio - Escuela</title>
+<link href="css/estilo.css" rel="stylesheet" type="text/css">
+<script src="jsp/archivo.js" type="text/javascript"></script>
+</head>
+
+
+<body>
+<form action="inicio-escuela.php" method="post">
+<div class="membrete"></div>
+<div class="espacio"><table align="center"><th><?php include("funciones/menu.php");?></th></table></div>
+<div class="contenido">
+
+<table class="tablacontenido"> <!-- TABLA CONTENIDO -->
+<tr><td valign="top">
+<table class="tablainicio">
+<tr><td colspan="2" >RESE&Ntilde;A HIST&Oacute;RICA <hr></td></tr> 
+<tr><td width="*">
+<p>Un 12 de Octubre de 1953, <br>nació esta institución dedicada a la educación básica,
+ <br>por iniciativa de los vecinos del sector quienes veían la necesidad de contar con una escuela para sus hijos, 
+ <br>que fuera el centro de las actividades culturales con la identidad propia del sector.
+ <br>Con el tiempo fue creciendo y hoy cobija en sus aulas alumnos desde Prekinder hasta octavo básico. 
+ </p>
+</td>
+<td width="170px" align="center" valign="middle"><img src="imagenes/escuela.jpg" alt="Foto Escuela" width="150px" height="150px"></td></tr>
+</table>
+
+<!-- DIV GOOGLE MAP -->
+<div class="recuadro" id="google" style="visibility:hidden">
+<input type="button" name="boton" value="x" size="2px" onclick="ocultar('google')">
+<p class="letra">Mapa del Sitio</p>
+<br>
+<center>
+<iframe width="800" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=santa+rita+aragua+venezuela&amp;aq=&amp;sll=10.218772,-67.51963&amp;sspn=0.010115,0.013797&amp;ie=UTF8&amp;hq=&amp;hnear=Santa+Rita,+El+Consejo,+Aragua,+Venezuela&amp;ll=10.25006,-67.234011&amp;spn=0.025338,0.068579&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><h3><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=es&amp;geocode=&amp;q=santa+rita+aragua+venezuela&amp;aq=&amp;sll=10.218772,-67.51963&amp;sspn=0.010115,0.013797&amp;ie=UTF8&amp;hq=&amp;hnear=Santa+Rita,+El+Consejo,+Aragua,+Venezuela&amp;ll=10.25006,-67.234011&amp;spn=0.025338,0.068579&amp;z=14&amp;iwloc=A" style="color:#0000FF;text-align:left">Ver mapa m&aacute;s grande</a></h3>
+</center>
+
+</div>
+
+<!-- DIV CONTACTO -->
+
+<div class="recuadro" id="contacto" style="visibility:hidden"> 
+<input type="button" name="boton" value="x" size="2px" onclick="ocultar('contacto')">
+<p class="letra">Contacto</p>
+<br>
+<table align="center" class="tablainicio">
+<tr><td>Tel&eacute;fonos</td><td>Direcci&oacute;n</td><td>Horario de Atenci&oacute;n</td></tr>
+<tr><td><br>0244-3237147<br> 04242586958</td>
+<td><br>Maracay Venezuela</td>
+<td><br>D&iacute;s: Lunes a Viernes<br> Hora: 8:00am - 2:00pm</td></tr>
+</table>
+</div>
+
+
+<!-- DIV REGISTRO DE NUEVO USUARIO -->
+
+<div class="recuadro" id="registro" style="visibility:hidden">
+<input type="button" name="boton" value="x" size="2px" onclick="ocultar('registro')">
+<p class="letra">Registrar Usuario Nuevo</p><br>
+<table class="tablainicio">
+<tr>
+<td>Nombre: </td><td></td>
+<td>Apellido: </td><td></td>
+<td>E-mail: </td><td></td>
+</tr>
+<tr>
+<td colspan="2" ><input type="text" name="nombre"></td>
+<td colspan="2"><input type="text" name="apellido"></td>
+<td colspan="2"><input type="text" name="email"></td>
+</tr>
+</table>
+<table class="tablainicio">
+<tr>
+<td>Usuario: </td><td></td>
+<td>Contrase&ntilde;a: </td><td></td>
+<td>Confirmar Contrase&ntilde;a: </td><td></td>
+</tr>
+<tr>
+<td colspan="2" ><input type="text" name="usuario"></td>
+<td colspan="2"><input type="password" name="clave"></td>
+<td colspan="2"><input type="password" name="clave"></td>
+</tr>
+</table>
+<br>
+<table align="center">
+<tr><td><input type="reset" value="Limpiar" name="boton"></td><td><input type="submit" value="Enviar" name="boton"</td></tr>
+</table>
+
+</div>
+</td></td></tr>
+</table> <!-- FIN TABLA CONTENIDO -->
+<div class="botones"><table align="center"><tr>
+<td><a href="#" title="Mapa del sitio" onclick="mostrar('google')"><img src="imagenes/google.jpeg" border="0" width="80px" height="80px" ></a></td>
+<td><a href="#" title="Contacto" onclick="mostrar('contacto')"><img src="imagenes/contacto.jpg" border="0" width="80px" height="80px" ></a></td>
+<td><a href="#" title="Registrar usuario" onclick="mostrar('registro')"><img src="imagenes/registro.png" border="0" width="80px" height="80px" ></a></td></tr></table></div>
+</div>
+
+</div>
+<div class="pie"><?php include('pie.html');?></div>
+</form>
+</body>
+</html>

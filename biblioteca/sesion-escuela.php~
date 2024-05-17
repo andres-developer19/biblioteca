@@ -1,0 +1,77 @@
+<?php 
+  $boton=$_POST['boton'];
+  $usuario=$_POST['usuario'];
+  $clave=$_POST['clave'];
+  $nivel=$_POST['nivel'];
+  
+  if($boton=="ENTRAR") 
+ {
+  if(($usuario=="")||($clave==""))
+  {
+	?>
+    <script>
+	  alert ("Especifique su ID y su contraseña");
+	</script> 
+    <?php
+	
+	}else{
+	require("funciones/conexion.php");
+	$sql="select usuario, clave, nivel from usuario where usuario='$usuario' and clave='$clave'";
+    $cursor= mysql_db_query ($bd,$sql);
+    $num = mysql_num_rows($cursor);
+    if($num>0)
+    { 
+      $arr_asoc = mysql_fetch_array($cursor);
+	  
+	  	  $usuario= $arr_asoc['usuario'];
+		  $clave = $arr_asoc['clave'];
+		  $nivel = $arr_asoc['nivel'];
+		  	   
+      $_SESSION['usuario']=$usuario;
+      $_SESSION['clave']=$clave;
+      $_SESSION['nivel']=$nivel;
+      ?> <script>
+	  alert ("Bienvenido al Sistema");
+	  location.href='inicio-escuela.php';
+      </script> 
+	  <?php	
+    }
+    else
+    {
+	?>
+    <script>
+       alert ("Clave / Usuario Incorrecto");
+	   location.href='sesion-escuela.php';
+    </script>
+    
+    	<?php	
+		}
+    }
+    }
+?>
+<html>
+<head>
+<title>Sesion - Escuela</title>
+<link href="css/estilo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="membrete"></div>
+<div class="contenido">
+
+<table class="tablacontenido">
+<tr><td>
+<center>Para Ingresar al Sistema <br> Ingresar su Usuario y Contrase&ntilde;a</center><br><br>
+<form method="post">
+<table align="center">
+<tr><td>Usuario: </td><td><input type="text" name="usuario" value="<?php echo $usuario;?>" ></td></tr>
+<tr><td>Contrase&ntilde;a: </td><td><input type="password" name="clave" value="<?php echo $clave;?>"></td></tr>
+<tr><td colspan="2" align="center"><input type="submit" name="boton" value="ENTRAR"></td></td></tr>
+</table>
+</form>
+</td></tr>
+</table>
+</div>
+
+<div class="pie"><?php include('pie.html');?></div>
+</body>
+</html>

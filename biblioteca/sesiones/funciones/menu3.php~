@@ -1,0 +1,25 @@
+<link rel="stylesheet" type="text/css" href="nav-h.css" />
+<ul id="navmenu-h">
+  <li><a href="recepcion.php">Recepción de Equipos</a></li>
+  <li><a href="servicio.php">Servicio Técnico</a></li>
+  <li><a href="compra.php">Registro de Compra</a></li>
+  <li><a href="#">Ver</a>
+      <ul>
+      <li><a href="clientes.php">Clientes Registrados</a></li>
+      <li><a href="equipos.php">Equipos Recibidos</a></li>
+      <li><a href="repuestos.php">Repuestos Existentes</a></li>
+      <li><a href="proveedores.php">Proveedores</a></li>
+      </ul>
+  </li>
+  <li><a href="#">Herramienta</a>
+    <ul>
+	<li><a href="manual.pdf">Ayuda</a></li>
+	<?php if ($nivel==1) { ?><li><a href="registrar.php">Registrar Usuario</a></li><?php }?>
+	<?php if ($nivel==1) { ?><li><a href="Respaldo.php">Respaldo Datos</a></li><?php }?>
+	<?php if ($nivel==1) { ?><li><a href="auditoria.php">Auditoria</a></li><?php }?>
+      </ul>
+  </li>
+  <li><a href="cerrar.php">Cerrar Sesión</a></li>
+</ul>
+</body>
+</html>

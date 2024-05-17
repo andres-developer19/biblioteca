@@ -1,0 +1,8 @@
+<?php
+session_start();
+session_destroy();
+?>
+<script>
+alert("Cerrando Sesión");
+location.href='index.php';
+</script>

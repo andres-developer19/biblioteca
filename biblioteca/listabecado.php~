@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>PLANTILLA</title>
+<link href="css/estilo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<form action="nuevobecado.php" method="post">
+<div class="membrete"></div>
+<div class="espacio"><table align="center"><th valign="top"><?php include("funciones/menu-mision.php");?></th></table></div>
+<div class="contenido">
+<br>
+<table class="tablacontenido">
+<tr><td valign="top">
+<br>
+<center><h3>CENSO DE BECADOS</h3></center>
+<br>
+<table align="center" class="registro" border="1">
+<tr><td>N&ordm;</td><td>Apellidos</td><td>Nombres</td><td>Direcci&oacute;n</td><td>A</td><td>N/A</td><td>B/N</td><td>B/P</td><td>B/U/P</td></tr>
+</table>
+<br>
+&nbsp; &nbsp;Leyenda
+<li>A = Aiste</li>
+<li>N= No Asiste</li>
+<li>B/N= Becado Nacional </li>
+<li>B/P= Becado Postulado </li>
+<li>B/U/P= Becado &Uacute;ltimo postulado</li>
+</td></tr>
+</table>
+</div>
+
+<div class="pie"><?php include('pie.html');?></div>
+</form>
+</body>
+</html>

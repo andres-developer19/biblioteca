@@ -1,0 +1,142 @@
+body{
+	background-image:url(../imagenes/imagen%204.jpg);
+	background-repeat:no-repeat;
+	margin-top:15px;
+	background-position : absolute;
+	background-attachment : fixed; 
+	position: static;
+}
+.membrete{
+	background-color:#FFF;
+	margin-top:50px;
+	margin-left:50px;
+	/*margin:0 auto 0 auto; */
+	width:980px;
+	height:80px;
+	border: 5px outset #E0E0EB;
+	-moz-border-radius: 7px;
+	background-image:url(../imagenes/membrete.jpg);
+	background-repeat:no-repeat; /*para que no repita la imagen*/
+	background-position:center;
+	position:static;
+}
+
+.espacio{
+	margin-left:50px;
+	width:980px;
+	height:35px;
+	position:static;
+
+}
+.contenido{
+	margin-left:50px;
+	width:980px;
+	height:500px;
+	border:outset;
+	border-width:3px;
+	border-color:#E0E0EB;
+	background-color:#FFF;	
+	position:static;
+	z-index: 1;
+}
+
+.pie{
+	background-color:#FFF;
+	margin-left:50px;
+	width:980px;
+	height:30px;
+	border: 3px outset #E0E0EB;
+	position:static;
+}
+
+.tablacontenido{
+	width:980px;
+	height:500px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.botones{
+	margin-left:50px;
+	width:900px;
+	height:50px;
+	top:530px;
+	left: 90px;
+	-moz-border-radius: 10px;
+	position:absolute;
+	z-index: 1;
+	}
+
+.recuadro{
+	background-color:#F2F2F2;
+	width:900px;
+	height:440px;
+	top:220px;
+	left: 100px;
+	-moz-border-radius: 10px;
+	position:absolute;
+	z-index: 2;
+	}
+
+a{
+	text-decoration: none;
+	font-family: Courier;
+	text-transform: UPPERCASE;
+	font-size: 20px;	
+	color: #158AFC;
+	}
+
+a:link{
+	text-decoration: none;
+	}
+	
+.letra{
+	font-size: large;
+	font-style: italic;
+	text-decoration: underline;
+	font-family: time;
+	font-weight: bold;
+	line-height: 10%;
+	text-align: center;
+	}
+	
+.decorado{
+	text-decoration: blink;	
+	font-weight: bold;
+	font-size: x-large;
+	line-height: 10%;
+	text-align: center;
+	}
+
+.tabla{
+	border-style: double;
+	border-color: #666;
+	border-width: thick;	
+	}
+
+.registro{
+	font-size: 11pt;	
+	padding: 7px,7px,7px,7pt;
+	}
+	
+.tablainicio{
+	margin-left: 40px;
+	margin-top: 25px;
+	width: 900px;
+	}
+
+p{
+	text-align: justify;
+	}
+	
+textarea {
+        resize: none; /*PARA BLOQUEAR EL QUE SE PUEDA AGRANDAR O ACHICAR CON EL MOUSE */
+    }
+
+.otrodatos{
+	font-size: 10pt;	
+	padding: 6px,6px,6px,6pt;
+	vertical-align: top;
+	}
+
+

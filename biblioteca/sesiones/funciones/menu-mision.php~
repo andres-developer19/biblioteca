@@ -1,0 +1,26 @@
+<link rel="stylesheet" type="text/css" href="css/menu.css" />
+<ul id="navmenu-h">
+  <li><a href="inicio-mision.php">inicio</a></li>
+  <li><a href="#">Falicitadores</a>
+      <ul>
+      <li><a href="listafacilitador">Lista</a></li>
+      <li><a href="nuevofacilitador">Agregar Nuevo</a></li>
+      </ul>
+  </li>
+  <li><a href="#">Vencedores</a>
+      <ul>
+      <li><a href="registro-vencedor">Registro</a></li>
+      <li><a href="entrevista.php">Entrevista</a></li>
+      <li><a href="#">Traslado</a></li>
+      <li><a href="#">Lista</a></li>
+      </ul>
+  </li>
+  <li><a href="#">Becados</a>
+      <ul>
+      <li><a href="listabecado.php">Censo</a></li>
+      <li><a href="nuevobecado.php">Agregar Nuevo</a></li>
+      </ul>
+  </li>  
+</ul>
+</body>
+</html>

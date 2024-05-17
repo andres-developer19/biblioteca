@@ -1,0 +1,20 @@
+<script language="JavaScript">
+function mostrar(paso1)
+{
+document.all[paso1].style.visibility='visible';
+}
+</script>
+
+<script language="JavaScript">
+function mostrar(paso2)
+{
+document.all[paso2].style.visibility='visible';
+}
+</script>
+
+<script language="JavaScript">
+function ocultar(paso1)
+{
+document.all[paso1].style.visibility='hidden';
+}
+</script>

@@ -1,0 +1,128 @@
+.sortable { 
+	font:10px Verdana,Arial; 
+	margin:25px; 
+	background:#fff url(images-1/bg.gif) repeat-x; 
+	color:#091f30; 
+	width:750px; 
+	border-left:1px solid #c6d5e1; 
+	border-top:1px solid #c6d5e1; 
+	border-bottom:none; 
+	margin:0 auto 15px;
+}
+
+.sortable th {
+	background:url(images-1/header-bg.gif); 
+	text-align:center;
+	color:#000080;
+	border:1px solid #fff; border-right:none;
+	width:auto;
+	padding:10px;
+}
+
+.sortable th h3 {
+	font-size:10px;
+}
+
+.sortable td {
+	padding:4px 6px 6px; 
+	border-bottom:1px solid #c6d5e1; 
+	border-right:1px solid #c6d5e1;
+}
+
+.sortable .evenrow td {
+	background:#fff;
+}
+
+.sortable .oddrow td {
+	background:#ecf2f6;
+}
+
+.sortable td.evenselected {
+	background:#ecf2f6;
+
+}
+.sortable td.oddselected {
+	background:#dce6ee;
+}
+
+#controls {
+	width:780px; 
+	margin:0 auto; 
+	height: 35px;
+}
+
+#perpage {
+/*	float:left; 
+	margin-left: 40px;*/
+}
+
+#perpage select {
+	/*float:left; */
+	font-size:10px;
+}
+
+#perpage span {
+	/*float:left; */
+	margin:2px 0 0 5px;
+}
+
+#navigation {
+/*	float:left; */
+	width:240px; 
+	text-align:center;
+}
+
+#navigation1 img {
+	cursor:pointer;
+}
+
+#text {
+	/*float:left; */
+	width:90px; 
+	/*text-align:right;*/ 
+	margin-top:2px;
+}
+
+#vista{
+	border:solid 2px;
+    background : #000000;
+    padding : 4px;
+    overflow : auto;
+	border-radius: 5px;
+	/*position:absolute; */
+	width:855px;
+	height:350px;
+	background:#FFF; 
+	font:10px Verdana,Arial; 
+	margin:25px; 
+	background:#fff url(images-1/bg.gif) repeat-x; 
+	color:#091f30; 
+	border-left:1px solid #c6d5e1; 
+	border-top:1px solid #c6d5e1; 
+	border-bottom:none; 
+	margin:0 auto 15px;
+
+}
+
+#vista2{
+	border:solid 2px;
+    background : #000000;
+    padding : 4px;
+    overflow : auto;
+	border-radius: 5px;
+	/*position:absolute; */
+	width:860px;
+	height:350px;
+	background:#FFF; 
+	font:10px Verdana,Arial; 
+	margin:25px; 
+	background:#fff url(images-1/bg.gif) repeat-x; 
+	color:#091f30; 
+	border-left:1px solid #c6d5e1; 
+	border-top:1px solid #c6d5e1; 
+	border-bottom:none; 
+	margin:0 auto 15px;
+
+}
+
+

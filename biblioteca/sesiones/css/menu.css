@@ -1,0 +1,67 @@
+ul#menu-horizontal li {
+float: left;
+display: inline;
+position: relative;
+
+}
+
+ul#menu-horizontal ul {
+display: none;
+/*position: relative;*/
+margin-top:10px;
+left:0;
+
+padding:0;
+background:#FFFFFF;
+
+}
+
+ul#menu-horizontal ul li {
+display: block !important;
+}
+
+ul#menu-horizontal li:hover ul{
+display: none;
+}
+
+ul#menu-horizontal li:hover ul{
+display: block;
+}
+
+
+#menu-horizontal {
+width:800px;
+margin:0 auto;
+text-align:center;
+}
+
+#menu-horizontal li {
+margin:0 1px;
+width:105px;
+min-height:21px;
+text-align:center;
+background:url(../menu/img/encima_btn.jpg);
+background-repeat:no-repeat;
+list-style:none;
+padding:3px 2px;
+}
+
+/* y otro poquito por aquí.. */
+
+#menu-horizontal li:hover {
+background:url(../menu/img/debajo_btn.jpg);
+background-repeat:no-repeat;
+}
+
+#menu-horizontal li a {
+font:bold "Times New Roman", Times, serif;
+font-size:12px;
+color:#000;
+text-decoration:none;
+}
+
+#menu-horizontal li ul li{
+float:none;
+width:105px;
+margin:3px 0;
+}
